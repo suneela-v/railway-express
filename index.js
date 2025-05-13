@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 8080;
 
-console.log("App is starting...");
+console.log("App is startinggggg...");
 
 app.get('/', (req, res) => {
   res.send('Hello from Railway Express App!');
