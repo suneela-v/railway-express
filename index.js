@@ -14,4 +14,8 @@ app.get('/', (req, res) => {
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server is running on port ${port}`);
 });
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 //redeploy purpose12
