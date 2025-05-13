@@ -11,11 +11,13 @@ app.get('/', (req, res) => {
   res.send('Hello from Railway Express App!');
 });
 
-app.listen(port, '0.0.0.0', () => {
+app.listen(8080, '0.0.0.0', () => {
   console.log(`Server is running on port ${port}`);
 });
 app.get('/health', (req, res) => {
   res.status(200).send('OK');
 });
+setInterval(() => {}, 1000); // This will keep the process alive
+
 
 //redeploy purpose12
