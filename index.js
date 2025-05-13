@@ -10,6 +10,11 @@ console.log("App is starting...");
 app.get('/', (req, res) => {
   res.send('Hello from Railway Express App!');
 });
+app.use((req, res, next) => {
+  res.setHeader('Connection', 'keep-alive');
+  next();
+});
+
 
 app.listen(8080, '0.0.0.0', () => {
   console.log(`Server is running on port ${port}`);
